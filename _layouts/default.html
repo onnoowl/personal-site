@@ -40,16 +40,18 @@
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
         <hr>
-        <span class="credits left">Hosted on GitHub Pages</span>
-        <span class="credits right">Theme by <a
-            href="https://twitter.com/mattgraham">mattgraham</a></span>
       </div>
 
       {{ content }}
 
     </section>
+    <div id="footer">
+      <span class="credits left">Hosted on GitHub Pages</span>
+      <span class="credits right">Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+    </div>
 
   </div>
+
 
   {% if site.google_analytics %}
   <script>
