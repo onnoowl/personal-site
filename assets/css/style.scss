@@ -3,6 +3,21 @@
 
 @import "{{ site.theme }}";
 
+$mq-mobile-landscape : 480px !default;
+
+// Both portrait and landscape
+@mixin mobile-only {
+  @media (max-width : $mq-mobile-landscape) {
+    @content;
+  }
+}
+
+@include mobile-only {
+  section #title p {
+    font-size: 14px;
+  }
+}
+
 section #title {
   margin-bottom: 15px;
 }
