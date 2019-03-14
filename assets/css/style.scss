@@ -19,7 +19,8 @@ $mq-mobile-landscape : 480px !default;
 }
 
 section #title {
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 section {
@@ -38,4 +39,41 @@ section {
   font-weight: normal;
   color: #696969;
   margin-top: -10px;
+}
+
+.page-header {
+  width: 100%;
+
+  background: linear-gradient(238deg, #590600, #00034d, #000000);
+  background-size: 300% 600%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+  }
+
+  -webkit-box-shadow: inset -1px -63px 29px -55px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset -1px -63px 29px -55px rgba(0,0,0,0.75);
+  box-shadow: inset -1px -63px 29px -55px rgba(0,0,0,0.75);
+}
+
+.page-header section {
+  margin-top: 0px;
+  padding: 0px;
+  padding-top: 30px;
 }
