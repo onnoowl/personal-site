@@ -3,11 +3,11 @@
 
 @import "{{ site.theme }}";
 
-$mq-mobile-landscape : 480px !default;
+$mq-mobile-landscape: 480px !default;
 
 // Both portrait and landscape
 @mixin mobile-only {
-  @media (max-width : $mq-mobile-landscape) {
+  @media (max-width: $mq-mobile-landscape) {
     @content;
   }
 }
@@ -18,9 +18,14 @@ $mq-mobile-landscape : 480px !default;
   }
 }
 
+section #title p {
+  margin-bottom: 15px;
+}
+
 section #title {
-  margin-top: 15px;
+  margin-top: 0px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 section {
@@ -35,7 +40,7 @@ section {
 }
 #footer .credits {
   font-size: 11px;
-  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #696969;
   margin-top: -10px;
@@ -52,28 +57,81 @@ section {
   animation: AnimationName 15s ease infinite;
 
   @-webkit-keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
+    0% {
+      background-position: 0% 51%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 51%;
+    }
   }
   @-moz-keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
+    0% {
+      background-position: 0% 51%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 51%;
+    }
   }
   @keyframes AnimationName {
-    0%{background-position:0% 51%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 51%}
+    0% {
+      background-position: 0% 51%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 51%;
+    }
   }
 
-  -webkit-box-shadow: inset -1px -63px 29px -55px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset -1px -63px 29px -55px rgba(0,0,0,0.75);
-  box-shadow: inset -1px -63px 29px -55px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset -1px -63px 29px -55px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset -1px -63px 29px -55px rgba(0, 0, 0, 0.75);
+  box-shadow: inset -1px -63px 29px -55px rgba(0, 0, 0, 0.75);
 }
 
 .page-header section {
   margin-top: 0px;
   padding: 0px;
   padding-top: 30px;
+}
+
+button.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+button.btn {
+  padding: 0.75rem 1rem;
+}
+
+button.btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+a.btn {
+  padding: 0px;
+  margin: 0px 5px;
+  margin-bottom: 15px;
+  color: #0000;
+}
+
+#title button.btn {
+  font-size: 13px;
+  padding: 5px 10px;
 }
