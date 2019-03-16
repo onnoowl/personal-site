@@ -40,7 +40,7 @@ var loadBox = function () {
 };
 
 var getProyection = function () {
-  return perspectiveProjection(45, 512 / 512, 0.1, 400.0);
+  return perspectiveProjection(45, 770 / 512, 0.1, 400.0);
 };
 var perspectiveProjection = function (fovy, aspect, znear, zfar) {
   var top = Math.tan(fovy * Math.PI / 360) * znear;

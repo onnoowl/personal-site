@@ -1,11 +1,12 @@
 if (typeof (WebGL2RenderingContext) !== "undefined") {
-  var offset = 100.0;
+  var posRandRange = 0.5;
+  var velRandRange = 0.215
 
   var arrayNodeId = [];
   var nodeId = 0;
   var arrayNodePosXYZW = [];
   var arrayNodeVertexColor = [];
-  var arrayNodeDir = [];
+  var arrayNodeVel = [];
 
   // initialize some nodes
   var iniNodes = (function (numNodes) {
@@ -14,16 +15,18 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       arrayNodePosXYZW.push(jsonIn.position[0], jsonIn.position[1], jsonIn.position[2], 1.0);
       arrayNodeVertexColor.push(jsonIn.color[0], jsonIn.color[1], jsonIn.color[2], 1.0);
 
-      var x = Math.random(); var y = Math.random(); var z = Math.random();
-      arrayNodeDir.push(x, y, z, 255);
+      var x = -velRandRange + (Math.random() * 2 * velRandRange);
+      var y = -velRandRange + (Math.random() * 2 * velRandRange);
+      var z = -velRandRange + (Math.random() * 2 * velRandRange);
+      arrayNodeVel.push(x, y, z, 0.0);
 
       nodeId++;
     };
 
     for (var n = 0; n < numNodes; n++) {
-      var x = -(offset / 2) + (Math.random() * offset);
-      var y = -(offset / 2) + (Math.random() * offset);
-      var z = -(offset / 2) + (Math.random() * offset);
+      var x = -posRandRange + (Math.random() * 2 * posRandRange);
+      var y = -posRandRange + (Math.random() * 2 * posRandRange);
+      var z = -posRandRange + (Math.random() * 2 * posRandRange);
 
       var node = addNode({
         "position": [x, y, z],
@@ -32,38 +35,18 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
     }
   })(100000); // 100K
 
-  pole_code = function () {
-    return `
-      float offset;vec3 polePos; vec3 cc;float distanceToPole;
-
-      polePos = vec3(pole1X,pole1Y,pole1Z);
-      offset = ` + offset.toFixed(20) + `;
-
-      distanceToPole = 1.0-sqrt(length(vec3(polePos-currentPos)/offset));
-
-      vec3 vecN = ((vec3(polePos-currentPos)-(-1.0))/(1.0-(-1.0)) - 0.5 ) *2.0;
-      cc = vecN*distanceToPole;
-
-      currentDir = clamp(currentDir+(cc*0.001),-1.0,1.0);
-    `;
-  };
-
   var gpufG = new gpufor(document.getElementById("graph"), // target canvas
 
     // VALUES
     {
       "float4* posXYZW": arrayNodePosXYZW,
-      "float4* dir": arrayNodeDir,
+      "float4* vel": arrayNodeVel,
       "float*attr nodeId": arrayNodeId,
       "float4*attr nodeVertexCol": arrayNodeVertexColor,
       "mat4 PMatrix": transpose(getProyection()),
       "mat4 cameraWMatrix": transpose(new Float32Array([1.0, 0.0, 0.0, 0.0,
         0.0, 1.0, 0.0, 0.0,
-        0.0, 0.0, 1.0, -100.0,
-        0.0, 0.0, 0.0, 1.0])),
-      "mat4 nodeWMatrix": transpose(new Float32Array([1.0, 0.0, 0.0, 0.0,
-        0.0, 1.0, 0.0, 0.0,
-        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 1.0, -3.0,
         0.0, 0.0, 0.0, 1.0])),
       'float pole1X': 0.0,
       'float pole1Y': 0.0,
@@ -78,21 +61,35 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       'float friction': 0.01
     },
 
-    // KERNEL PROGRAM 1 (update "dir" & "posXYZW" in return instrucction)
+    // KERNEL PROGRAM 1 (update "vel" & "posXYZW" in return instruction)
     {
       "type": "KERNEL",
       "name": "PARTICLE_KERNEL",
       "viewSource": false,
-      "config": ["n", ["dir", "posXYZW"],
+      "config": ["n", ["vel", "posXYZW"],
         // head
         '',
         // source
-        `vec4 dirA = dir[n];
-        vec3 currentDir = vec3(dirA.x,dirA.y,dirA.z);
-        vec3 currentPos = posXYZW[n].xyz;` +
-        pole_code() +
-        `vec3 newDir = currentDir*0.995;
-        return [vec4(newDir,1.0), vec4(currentPos,1.0)+vec4(newDir,0.0)];`],
+        `
+        vec3 currentVel = (vel[n]).xyz;
+        vec3 currentPos = posXYZW[n].xyz;
+
+        float offset;vec3 polePos; vec3 cc;float distanceToPole;
+
+        polePos = vec3(pole1X,pole1Y,pole1Z);
+        offset = ` + posRandRange.toFixed(20) + `;
+
+        distanceToPole = 1.0-sqrt(length(vec3(polePos-currentPos)/offset));
+
+        vec3 vecN = ((vec3(polePos-currentPos)-(-1.0))/(1.0-(-1.0)) - 0.5 ) *2.0;
+        cc = vecN*distanceToPole;
+
+        currentVel = clamp(currentVel+(cc*0.001),-1.0,1.0);
+
+        vec3 newVel = currentVel*0.995;
+        return [vec4(newVel,1.0), vec4(currentPos,1.0)+vec4(newVel,0.0)];
+        `
+      ],
       "drawMode": 4,
       "depthTest": true,
       "blend": false,
@@ -118,13 +115,8 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
         vec4 nodePosition = posXYZW[xx];
         vec4 nodeVertexColor = nodeVertexCol[];
 
-        mat4 nodepos = nodeWMatrix;
-        nodepos[3][0] = nodePosition.x;
-        nodepos[3][1] = nodePosition.y;
-        nodepos[3][2] = nodePosition.z;
-
         vVertexColor = nodeVertexColor;
-        gl_Position = PMatrix * cameraWMatrix * nodepos * vec4(1.0, 1.0, 1.0, 1.0);
+        gl_Position = PMatrix * cameraWMatrix * nodePosition;
         gl_PointSize = 2.0;
         `,
 
