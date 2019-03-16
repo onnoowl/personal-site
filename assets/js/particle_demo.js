@@ -1,6 +1,7 @@
 if (typeof (WebGL2RenderingContext) !== "undefined") {
-  var posRandRange = 0.5;
+  var posRandRange = 10.5;
   var velRandRange = 0.215
+  var numParticles = 1000;
 
   var arrayNodeId = [];
   var nodeId = 0;
@@ -33,7 +34,7 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
         "color": [Math.random(), Math.random(), Math.random()]
       });
     }
-  })(100000); // 100K
+  })(numParticles);
 
   var gpufG = new gpufor(document.getElementById("graph"), // target canvas
 
@@ -71,23 +72,57 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
         '',
         // source
         `
-        vec3 currentVel = (vel[n]).xyz;
-        vec3 currentPos = posXYZW[n].xyz;
+        const float M_PI = 3.1415926538;
+        int idx = int(n.x);
+        int len = `+ numParticles + `;
 
-        float offset;vec3 polePos; vec3 cc;float distanceToPole;
+        vec3 p = posXYZW[n].xyz;
+        vec3 v = (vel[n]).xyz;
+        float mag;
+        vec3 accel;
 
-        polePos = vec3(pole1X,pole1Y,pole1Z);
-        offset = ` + posRandRange.toFixed(20) + `;
+        int leader = (idx + 1) % len;
+        mag = 0.6;
+        accel = mag * normalize(posXYZW[vec2(leader, n.y)].xyz);
+        v += accel;
 
-        distanceToPole = 1.0-sqrt(length(vec3(polePos-currentPos)/offset));
+        int numInteractions = 200;
+        for (int counter = 0; counter < numInteractions; counter++) {
+          int i = (idx+ (counter - numInteractions/2))%len;
+          if (i != idx) {
+            vec3 o = posXYZW[vec2(i, n.y)].xyz;
+            vec3 dif = (o - p);
+            float dif_mag = length(dif);
+            vec3 normal_dif = normalize(dif);
 
-        vec3 vecN = ((vec3(polePos-currentPos)-(-1.0))/(1.0-(-1.0)) - 0.5 ) *2.0;
-        cc = vecN*distanceToPole;
+            mag = -30.0*0.218 * exp(-40.0*dif_mag);
+            accel = mag * normal_dif / float(numInteractions);
+            v += accel;
 
-        currentVel = clamp(currentVel+(cc*0.001),-1.0,1.0);
+            mag = 4.318 * (
+              -cos(omega1*M_PI * dif_mag + (phase_shift1 + 1.5*float(idx % 10000)/5000.0 - 5000.0)) +
+              -cos(omega2*M_PI * dif_mag + phase_shift2) +
+              -1.5*cos(omega3*M_PI * dif_mag + phase_shift3)
+            );
+            accel = mag * normal_dif / float(numInteractions);
+            v += accel;
+          }
+        }
 
-        vec3 newVel = currentVel*0.995;
-        return [vec4(newVel,1.0), vec4(currentPos,1.0)+vec4(newVel,0.0)];
+        float l = length(p);
+        mag = 0.4 * l*l;
+        accel = mag * normalize(p) * -1.0;
+        v += accel;
+
+        v *= friction;
+
+        p += v;
+
+        p += -0.010f * normalize(cross(p, vec3(0.4f, 0.6f, 0.0f))) * float(idx%3 == 0);
+        p += 0.010f * normalize(cross(p, vec3(-0.6f, 0.4f, 0.0f))) * float((idx+1)%3 == 0);
+        p += 0.004f * normalize(cross(p, vec3(1.0f, 0.0f, 0.0f))) * float((idx+2)%3 == 0);
+
+        return [vec4(v, 1.0), vec4(p, 1.0)];
         `
       ],
       "drawMode": 4,
