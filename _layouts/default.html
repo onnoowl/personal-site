@@ -40,14 +40,19 @@
         <div id="title">
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <a href="https://gitlab.com/onnoowl" class="btn">
+          <a class="btn mail" href="mailto:error.javascript.not.enabled@stuarthunt.dev">
             <button class="btn">
-              GitLab
+              Contact Me
             </button>
           </a>
           <a href="https://www.linkedin.com/in/stuart-h-746114101/" class="btn">
             <button class="btn">
               LinkedIn
+            </button>
+          </a>
+          <a href="https://gitlab.com/onnoowl" class="btn">
+            <button class="btn">
+              GitLab
             </button>
           </a>
         </div>
@@ -62,7 +67,8 @@
 
     <div id="footer">
       <span class="credits left">Hosted on GitHub Pages</span>
-      <span class="credits right">Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
+      <span class="credits right">Modified from <a href="https://twitter.com/mattgraham">mattgraham</a>&#39;s Jekyll
+        Theme</span>
     </div>
   </div>
 
@@ -78,6 +84,13 @@
     ga('send', 'pageview');
   </script>
   {% endif %}
+
+  <script>
+    $('a.mail').on('click', function () {
+      var href = $(this).attr('href');
+      $(this).attr('href', href.replace('error.javascript.not.enabled', 'contactme'));
+    });
+  </script>
 </body>
 
 </html>

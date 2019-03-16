@@ -1,37 +1,61 @@
-## Welcome to GitHub Pages
+## Summary
 
-You can use the [editor on GitHub](https://github.com/onnoowl/personal-site/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+I am an NC State student and software developer with experience in backend, frontend, deep learning, entrepreneurship, and over a dozen programming languages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+My work experience includes an internship at IBM, and four summers at SAS Institute. While at SAS, I developed a patent for a deep learning model. At IBM, I took an online MIT course on quantum computing.
 
-### Markdown
+Languages
+: Rust, Elixir/Phoenix, Java, Ruby, Python, Javascript, HTML/CSS, C, C#, C++, Go, Elm, Crystal, Nim, Wolfram Language
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Other Experience
+: Agile Software Development, Deep Learning, Quantum Computing, OpenGL & WebGL, Deployment Technologies and Docker, Blockchain/dag, Unix
 
-```markdown
-Syntax highlighted code block
+## Objective
 
-# Header 1
-## Header 2
-### Header 3
+To advance the fields of programming language design, artificial intelligence, and/or quantum computing while obtaining a Masters in Computer Science through NCSU’s ABM program.
 
-- Bulleted
-- List
+## Education
+North Carolina State University, Raleigh, NC
+: **4.0GPA**, Dean’s List, Bachelor of Science, Computer Science and Engineering - December 2019
 
-1. Numbered
-2. List
+Cary Academy, Cary, NC
+: High School Diploma, Headmaster’s Honor Roll – June 2016
 
-**Bold** and _Italic_ and `Code` text
+## Work Experience
+### **IBM Technical Intern** --- Summer 2018
+*International Business Machines Corp., Raleigh, NC.*
+- Participated in an online MITx Quantum Information Science II course throughout the summer.
+- Built a POC quantum algorithm language parser that allowed the use of quantum mathematical notation to program quantum simulations as part of an IBM hack-a-thon.
+- Led a small intern team to develop a business data analysis and visualization app for viewing live insights of sales data.
+  - Gained valuable leadership, project management, and teamwork skills, as well as further experience with cloud deployment, continuous integration, Python, pandas, Javascript/HTML/CSS, and data analysis
 
-[Link](url) and ![Image](src)
-```
+### **Patent Lead Inventor** --- Filed January 24th 2017
+*SAS Institute Inc., Cary, NC.*
+- “Pattern Identifier System” U.S. Patent Application 20180211153, Filed January 24th 2017, Published July 26th, 2018, Appl. No. 15/658566, Inventors: Stuart Hunt, Samuel Leeman-Munk, Richard Crowell.
+  - A novel deep learning model for identifying and tagging multiple overlapping patterns present in one-dimensional data, for the purposes of generating natural language descriptions
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### **Co-founder and Developer** --- January 2017 – March 2018
+*Backyard Ventures LLC, Raleigh, NC.*
+- Created BeerMoney, an odd jobs marketplace for students, by students.
+  - Developed the BeerMoney web app and backend server, gaining extensive experience with Elixir/Phoenix, Javascript/HTML/CSS, and SQL.
 
-### Jekyll Themes
+### **SAS R&D Technical Intern** --- Summers of 2014, 2015, 2016, and 2017
+*SAS Institute Inc., Cary, NC.*
+- Summer 2017: Studied quantum computing, and developed a method for evaluating, and calibrating artificial intelligence model probability outputs and their statistical accuracy. Began work on a second patent.
+  - Gained experience with Quantum Computing, Bayesian statistics, deep learning probability calibration techniques, and more of the Python ecosystem
+- Summer 2016 – January 2017: Patented a deep learning model I developed to learn insights from data for the purposes of generating natural language descriptions of the data.
+  - Gained experience with deep learning, tensorflow, recurrent and convolutional neural networks, synthetic data generation, Elixir, and Python
+- Summer 2015: Built a proof of concept extension of B.O.S.H. that extended its functionality from only deploying to cloud-based hardware to deploying to any hardware.
+  - Gained experience with Go, Ruby, Git, deployment, unit testing, documentation, and analyzing open source project code
+- Summer 2014: Prototyped cloud-based log collection/analysis tool with web GUI.
+  - Gained hands on experience with Amazon Cloud Services, Ruby, Java, HTML/CSS/Javascript, Git, Regex, and the MS Office Suite
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/onnoowl/personal-site/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Honors and Activities:
+- NCSU Honors Program member
+- Tau Beta Pi Honors Society Member
+- Phi Kappa Phi Honors Society Member
+- Dean’s List for all semesters completed
+- Albright Entrepreneurs Village Member
+- Charles D. & Patricia D. Lamb Scholarship
+- Duke Energy Scholarship
+- Headmaster’s Honor Roll and Effort Honor Roll for all trimesters of High School.
