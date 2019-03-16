@@ -34,7 +34,7 @@
   <!-- end header -->
 
 
-  <div class="page-header">
+  <header class="page-header" role="banner">
     <div class="wrapper">
       <section>
         <div id="title">
@@ -58,12 +58,14 @@
         </div>
       </section>
     </div>
-  </div>
+  </header>
 
   <div class="wrapper">
-    <section class="content">
-      {{ content }}
-    </section>
+    <main role="main">
+      <section class="content">
+        {{ content }}
+      </section>
+    </main>
 
     <div id="footer">
       <span class="credits">Hosted on GitHub Pages</span>
