@@ -1,3 +1,5 @@
+<div class="card" markdown="1">
+
 ## Summary
 
 I am an NC State student and software developer with experience in backend, frontend, deep learning, entrepreneurship, and over a dozen programming languages.
@@ -10,9 +12,17 @@ Languages
 Other Experience
 : Agile Software Development, Deep Learning, Quantum Computing, OpenGL & WebGL, Deployment Technologies and Docker, Blockchain/dag, Unix
 
+</div>
+
+<div class="card" markdown="1">
+
 ## Objective
 
 To advance the fields of programming language design, artificial intelligence, and/or quantum computing while obtaining a Masters in Computer Science through NCSU’s ABM program.
+
+</div>
+
+<div class="card" markdown="1">
 
 ## Education
 North Carolina State University, Raleigh, NC
@@ -20,6 +30,10 @@ North Carolina State University, Raleigh, NC
 
 Cary Academy, Cary, NC
 : High School Diploma, Headmaster’s Honor Roll – June 2016
+
+</div>
+
+<div class="card" markdown="1">
 
 ## Work Experience
 ### **IBM Technical Intern** --- Summer 2018
@@ -50,6 +64,10 @@ Cary Academy, Cary, NC
 - Summer 2014: Prototyped cloud-based log collection/analysis tool with web GUI.
   - Gained hands on experience with Amazon Cloud Services, Ruby, Java, HTML/CSS/Javascript, Git, Regex, and the MS Office Suite
 
+</div>
+
+<div class="card" markdown="1">
+
 ## Honors and Activities:
 - NCSU Honors Program member
 - Tau Beta Pi Honors Society Member
@@ -59,3 +77,5 @@ Cary Academy, Cary, NC
 - Charles D. & Patricia D. Lamb Scholarship
 - Duke Energy Scholarship
 - Headmaster’s Honor Roll and Effort Honor Roll for all trimesters of High School.
+
+</div>
