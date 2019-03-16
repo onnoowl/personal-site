@@ -24,12 +24,18 @@ section #title p {
 
 section #title {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
 section {
   margin-top: 15px;
+}
+
+@include mobile-only {
+  .wrapper section {
+    margin-bottom: 0px;
+  }
 }
 
 #footer .credits.left {
@@ -158,6 +164,12 @@ section {
 
 section.content {
   padding-top: 0px;
+}
+
+@include mobile-only {
+  body > .wrapper {
+    padding: 5px;
+  }
 }
 
 body {
