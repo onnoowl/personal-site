@@ -1,5 +1,12 @@
 <div class="card" markdown="1">
 
+## Demos
+- [Sinusoidal Forces Particle Physics Demo](particles)
+
+</div>
+
+<div class="card" markdown="1">
+
 ## Summary
 
 I am an NC State student and software developer with experience in backend, frontend, deep learning, entrepreneurship, and over a dozen programming languages.

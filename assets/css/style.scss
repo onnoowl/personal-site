@@ -147,14 +147,17 @@ h3 {
 }
 
 .card {
+  padding: 30px;
+  padding-bottom: 15px;
+  background-color: #252525;
+}
+
+.card,
+.canvas-card {
   -webkit-box-shadow: 10px 10px 25px -4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 10px 10px 25px -4px rgba(0, 0, 0, 0.2);
   box-shadow: 10px 10px 25px -4px rgba(0, 0, 0, 0.2);
-
-  padding: 30px;
   margin: 15px;
-  padding-bottom: 15px;
-  background-color: #252525;
 }
 
 .wrapper,
@@ -202,4 +205,14 @@ body {
 
 #footer {
   text-align: center;
+}
+
+.canvas-container {
+  width: 100%;
+  text-align: center;
+}
+
+.canvas-card {
+  margin: 0 auto;
+  display: inline;
 }

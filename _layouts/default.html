@@ -28,8 +28,10 @@
     <div class="wrapper">
       <section>
         <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <a href="/">
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            <p>{{ site.description | default: site.github.project_tagline }}</p>
+          </a>
           <a class="btn mail" href="mailto:error.javascript.not.enabled@stuarthunt.dev">
             <button class="btn">
               Contact Me
