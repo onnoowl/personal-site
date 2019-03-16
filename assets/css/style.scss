@@ -173,3 +173,21 @@ body {
   font-kerning: normal;
   background: #1d1d1d;
 }
+
+@include mobile-only {
+  menu,
+  ol,
+  ul {
+    padding: 0 0 0 20px;
+  }
+}
+
+@include mobile-only {
+  dd {
+    margin: 0 0 0 20px;
+  }
+}
+
+#footer {
+  text-align: center;
+}
