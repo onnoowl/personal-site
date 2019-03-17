@@ -23,8 +23,10 @@
 *Browsers other than Firefox or Chrome may not be supported.*
 
 This particle physics simulation shows what it would look like if particles interacted with sinusoidal forces. Each particle experiences:
-1. A sinusoidal force with 200 other particles
-2. A rotational force going either clockwise or counter-clockwise (random per particle)
-3. A gravitational attraction to the center
+1. Three sinusoidal forces acting on 200 adjacent particles (it's too expensive to compute with every other particle, plus a smaller number encourages the chaining effect). Each sinusoidal force gradually changes its phase and frequency over time.
+2. A "follow the leader" force attracting it to another chosen particle. This helps form chains.
+3. A strong friction effect that forces the particles into low energy states, causing stronger patterns.
+4. A gravitational attraction to the center.
+5. A rotational force. Each particle is a member of one of three groups, and each of the three groups has a different rotational axis.
 
 </div>

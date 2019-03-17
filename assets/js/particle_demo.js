@@ -268,5 +268,5 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
   window.onload = tick;
 } else {
   console.log("Error, WebGL2RenderingContext not found.");
-  document.getElementById("graph-container").innerHTML = "<div class=\"card\"><h1>Error</h1><p>WebGL2RenderingContext not found.</p><p>Please use either Firefox or Chrome to view this demo.</p></div>";
+  document.getElementById("graph-container").innerHTML = "<div class=\"card\"><h1>Unsupported Platform</h1><p>Sorry, WebGL2RenderingContext was not found.</p><p>Please use either Firefox or Chrome to view this demo.</p></div>";
 }
