@@ -39,8 +39,8 @@ var loadBox = function () {
   return { "vertices": vertexArray, "indices": indexArray };
 };
 
-var getProyection = function () {
-  return perspectiveProjection(60, 770 / 512, 0.001, 100.0);
+var getProyection = function (ratio) {
+  return perspectiveProjection(60, ratio, 0.001, 100.0);
 };
 var perspectiveProjection = function (fovy, aspect, znear, zfar) {
   var top = Math.tan(fovy * Math.PI / 360) * znear;

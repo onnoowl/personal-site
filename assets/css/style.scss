@@ -208,11 +208,14 @@ body {
 }
 
 .canvas-container {
-  width: 100%;
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .canvas-card {
   margin: 0 auto;
-  display: inline;
+  display: block;
+  width: 100%;
+  height: 512px;
 }

@@ -101,7 +101,9 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
     }
   })(numParticles);
 
-  var gpufG = new gpufor(document.getElementById("graph"), // target canvas
+  var canvas = document.getElementById("graph");
+
+  var gpufG = new gpufor(canvas, // target canvas
 
     // VALUES
     {
@@ -109,7 +111,7 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       "float4* vel": arrayNodeVel,
       "float*attr nodeId": arrayNodeId,
       "float4*attr nodeVertexCol": arrayNodeVertexColor,
-      "mat4 PMatrix": transpose(getProyection()),
+      "mat4 PMatrix": transpose(getProyection(canvas.width / canvas.height)),
       "mat4 cameraWMatrix": transpose(new Float32Array([1.0, 0.0, 0.0, 0.0,
         0.0, 1.0, 0.0, 0.0,
         0.0, 0.0, 1.0, -3.0,
@@ -236,6 +238,27 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       "blendDstMode": "ONE_MINUS_SRC_ALPHA"
     });
 
+  function onResize() {
+    var gl = gpufG.getCtx();
+    var realToCSSPixels = window.devicePixelRatio;
+
+    // Lookup the size the browser is displaying the canvas in CSS pixels
+    // and compute a size needed to make our drawingbuffer match it in
+    // device pixels.
+    var displayWidth = Math.floor(gl.canvas.clientWidth * realToCSSPixels);
+    var displayHeight = Math.floor(gl.canvas.clientHeight * realToCSSPixels);
+
+    // Check if the canvas is not the same size.
+    if (gl.canvas.width !== displayWidth || gl.canvas.height !== displayHeight) {
+
+      // Make the canvas the same size
+      gl.canvas.width = displayWidth;
+      gl.canvas.height = displayHeight;
+    }
+  }
+
+  window.addEventListener("resize", onResize);
+
   var startTime = getSeconds();
   var tick = function () {
     var time = getSeconds() - startTime;
@@ -245,7 +268,7 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
 
     var gl = gpufG.getCtx();
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    gl.viewport(0, 0, 770, 512);
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     gl.clearColor(0.145, 0.145, 0.145, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
@@ -258,13 +281,15 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
     gpufG.setArg("omega1", omega1.val);
     gpufG.setArg("omega2", omega2.val);
     gpufG.setArg("omega3", omega3.val);
-    gpufG.setArg("phase_shift1", (0.5 * -1.3 * time))
-    gpufG.setArg("phase_shift2", (0.5 * -0.47 * time))
-    gpufG.setArg("phase_shift3", (0.5 * 0.83 * time))
+    gpufG.setArg("phase_shift1", (0.5 * -1.3 * time));
+    gpufG.setArg("phase_shift2", (0.5 * -0.47 * time));
+    gpufG.setArg("phase_shift3", (0.5 * 0.83 * time));
+    gpufG.setArg("PMatrix", transpose(getProyection(gl.canvas.width / gl.canvas.height)));
 
     gpufG.processGraphic("posXYZW");
   };
 
+  onResize();
   window.onload = tick;
 } else {
   console.log("Error, WebGL2RenderingContext not found.");

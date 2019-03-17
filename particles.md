@@ -11,7 +11,7 @@
 </div> -->
 
 <div id="graph-container" class="canvas-container">
-  <canvas id="graph" class="canvas-card" width="770" height="512"></canvas>
+  <canvas id="graph" class="canvas-card"></canvas>
 </div>
 
 <script src="/assets/js/particle_demo.js"></script>
