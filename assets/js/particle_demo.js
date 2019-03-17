@@ -1,7 +1,53 @@
 if (typeof (WebGL2RenderingContext) !== "undefined") {
-  var posRandRange = 10.5;
+  Number.prototype.clamp = function (min, max) {
+    return Math.min(Math.max(this, min), max);
+  };
+
+  function getSeconds() {
+    return new Date().getTime() / 1000;
+  }
+
+  function random(rangeStart, rangeEnd) {
+    return rangeStart + Math.random() * (rangeEnd - rangeStart);
+  }
+
+  class RandAnimated {
+    constructor(valRangeBegin, valRangeEnd, timeRangeBegin, timeRangeEnd) {
+      this.valRangeBegin = valRangeBegin;
+      this.valRangeEnd = valRangeEnd;
+      this.timeRangeBegin = timeRangeBegin;
+      this.timeRangeEnd = timeRangeEnd;
+
+
+      this.val = random(valRangeBegin, valRangeEnd);
+
+      this.pick_next();
+    }
+
+    pick_next() {
+      this.last_val = this.val;
+      this.last_time = getSeconds();
+
+      this.next_val = random(this.valRangeBegin, this.valRangeEnd);
+      this.next_time = getSeconds() + random(this.timeRangeBegin, this.timeRangeEnd);
+    }
+
+    update() {
+      var perc_there = (getSeconds() - this.last_time) / (this.next_time - this.last_time);
+      this.val = (perc_there.clamp(0.0, 1.0) * (this.next_val - this.last_val) + this.last_val)
+      if (perc_there > 1.0) {
+        this.pick_next()
+      }
+    }
+  }
+
+  var omega1 = new RandAnimated(1.0, 5.0, 3.0, 20.0);
+  var omega2 = new RandAnimated(0.1, 2.5, 3.0, 20.0);
+  var omega3 = new RandAnimated(0.1, 2.5, 3.0, 20.0);
+
+  var posRandRange = 0.5;
   var velRandRange = 0.215
-  var numParticles = 1000;
+  var numParticles = 150 * 150;
 
   var arrayNodeId = [];
   var nodeId = 0;
@@ -49,13 +95,10 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
         0.0, 1.0, 0.0, 0.0,
         0.0, 0.0, 1.0, -3.0,
         0.0, 0.0, 0.0, 1.0])),
-      'float pole1X': 0.0,
-      'float pole1Y': 0.0,
-      'float pole1Z': 0.0,
 
-      'float omega1': 2.4624481,
-      'float omega2': 0.89865327,
-      'float omega3': 0.94543356,
+      'float omega1': omega1.val,
+      'float omega2': omega2.val,
+      'float omega3': omega3.val,
       'float phase_shift1': -338.67426,
       'float phase_shift2': -130.25932,
       'float phase_shift3': 216.23048,
@@ -69,11 +112,15 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       "viewSource": false,
       "config": ["n", ["vel", "posXYZW"],
         // head
-        '',
+        `
+        vec2 get_id(int id) {
+          return get_global_id(float(id), uBufferWidth, 1.0);
+        }
+        `,
         // source
         `
         const float M_PI = 3.1415926538;
-        int idx = int(n.x);
+        int idx = int(nodeId[n]);
         int len = `+ numParticles + `;
 
         vec3 p = posXYZW[n].xyz;
@@ -83,14 +130,14 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
 
         int leader = (idx + 1) % len;
         mag = 0.6;
-        accel = mag * normalize(posXYZW[vec2(leader, n.y)].xyz);
+        accel = mag * normalize(posXYZW[get_id(leader)].xyz);
         v += accel;
 
         int numInteractions = 200;
         for (int counter = 0; counter < numInteractions; counter++) {
           int i = (idx+ (counter - numInteractions/2))%len;
           if (i != idx) {
-            vec3 o = posXYZW[vec2(i, n.y)].xyz;
+            vec3 o = posXYZW[get_id(i)].xyz;
             vec3 dif = (o - p);
             float dif_mag = length(dif);
             vec3 normal_dif = normalize(dif);
@@ -169,18 +216,9 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       "blendDstMode": "ONE_MINUS_SRC_ALPHA"
     });
 
-
-  gpufG.setArg("PMatrix", transpose(getProyection()));
-  gpufG.setArg("cameraWMatrix", transpose(new Float32Array([1.0, 0.0, 0.0, 0.0,
-    0.0, 1.0, 0.0, 0.0,
-    0.0, 0.0, 1.0, -100.0 + Math.random(),
-    0.0, 0.0, 0.0, 1.0])));
-  gpufG.setArg("nodeWMatrix", transpose(new Float32Array([1.0, 0.0, 0.0, 0.0,
-    0.0, 1.0, 0.0, 0.0,
-    0.0, 0.0, 1.0, 0.0,
-    0.0, 0.0, 0.0, 1.0])));
-
+  var startTime = getSeconds();
   var tick = function () {
+    var time = getSeconds() - startTime;
     window.requestAnimFrame(tick);
 
     gpufG.processKernels();
@@ -192,6 +230,17 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     //gpufG.setArg("pole1X", 30);
+
+    omega1.update();
+    omega2.update();
+    omega3.update();
+
+    gpufG.setArg("omega1", omega1.val);
+    gpufG.setArg("omega2", omega2.val);
+    gpufG.setArg("omega3", omega3.val);
+    gpufG.setArg("phase_shift1", (0.5 * -1.3 * time))
+    gpufG.setArg("phase_shift2", (0.5 * -0.47 * time))
+    gpufG.setArg("phase_shift3", (0.5 * 0.83 * time))
 
     gpufG.processGraphic("posXYZW");
   };
