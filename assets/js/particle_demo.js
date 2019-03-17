@@ -11,6 +11,14 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
     return rangeStart + Math.random() * (rangeEnd - rangeStart);
   }
 
+  // function shuffle(a) {
+  //   for (let i = a.length - 1; i > 0; i--) {
+  //     const j = Math.floor(Math.random() * (i + 1));
+  //     [a[i], a[j]] = [a[j], a[i]];
+  //   }
+  //   return a;
+  // }
+
   class RandAnimated {
     constructor(valRangeBegin, valRangeEnd, timeRangeBegin, timeRangeEnd) {
       this.valRangeBegin = valRangeBegin;
@@ -74,6 +82,17 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       var x = -posRandRange + (Math.random() * 2 * posRandRange);
       var y = -posRandRange + (Math.random() * 2 * posRandRange);
       var z = -posRandRange + (Math.random() * 2 * posRandRange);
+
+      // var b1 = Math.random();
+      // var rg1 = b1 * Math.random();
+
+      // var color2 = shuffle([
+      //   Math.random() / 2,
+      //   Math.random(),
+      //   1 - (Math.random() / 2)
+      // ]);
+
+      // var final_color = [rg1 * 0.8 + 0.1 * color2[0], rg1 * 0.8 + 0.1 * color2[1], b1 * 0.8 + 0.1 * color2[2]];
 
       var node = addNode({
         "position": [x, y, z],
@@ -194,12 +213,13 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
         `
         vec2 xx = get_global_id(nodeId[], uBufferWidth, 1.0);
 
-        vec4 nodePosition = posXYZW[xx];
+
+        vec3 vertex_position = posXYZW[xx].xyz;
         vec4 nodeVertexColor = nodeVertexCol[];
 
-        vVertexColor = nodeVertexColor;
-        gl_Position = PMatrix * cameraWMatrix * nodePosition;
-        gl_PointSize = 2.0;
+        gl_Position = PMatrix * cameraWMatrix * vec4(vertex_position*1.5, 1.0);
+        gl_PointSize = 6.0 / gl_Position.z;
+        vVertexColor = vec4( (abs(vertex_position*2.0)*1.2 + 0.2)*0.3 + nodeVertexColor.xyz*0.6, 1.0 );
         `,
 
         // fragment head
