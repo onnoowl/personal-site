@@ -1,9 +1,17 @@
-<div class="card" markdown="1">
+<head>
+  <script src="/assets/js/scene_utils.js"></script>
+  <script src="/assets/js/WebCLGL.min.js"></script>
+</head>
+
+<canvas id="graph" class="canvas-background"></canvas>
+<script src="/assets/js/particle_demo.js"></script>
+
+<!-- <div class="card" markdown="1">
 
 ## Demos
 - [Sinusoidal Forces Particle Physics Demo](particles)
 
-</div>
+</div> -->
 
 <div class="card" markdown="1">
 

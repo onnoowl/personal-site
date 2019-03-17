@@ -219,9 +219,9 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
         vec3 vertex_position = posXYZW[xx].xyz;
         vec4 nodeVertexColor = nodeVertexCol[];
 
-        gl_Position = PMatrix * cameraWMatrix * vec4(vertex_position*1.5, 1.0);
+        gl_Position = PMatrix * cameraWMatrix * vec4(vertex_position*2.0, 1.0);
         gl_PointSize = 6.0 / gl_Position.z;
-        vVertexColor = vec4( (abs(vertex_position*2.0)*1.2 + 0.2)*0.3 + nodeVertexColor.xyz*0.6, 1.0 );
+        vVertexColor = vec4( (abs(normalize(vertex_position*2.0))*1.2 + 0.2)*0.3 + nodeVertexColor.xyz*0.6, 1.0 );
         `,
 
         // fragment head
@@ -269,7 +269,7 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
     var gl = gpufG.getCtx();
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-    gl.clearColor(0.145, 0.145, 0.145, 1.0);
+    gl.clearColor(0.0, 0.0, 0.0, 0.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     //gpufG.setArg("pole1X", 30);
