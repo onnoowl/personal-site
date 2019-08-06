@@ -4,7 +4,7 @@
 </head>
 
 <canvas id="graph" class="canvas-background"></canvas>
-<script src="/assets/js/particle_demo.js"></script>
+<!-- <script src="/assets/js/particle_demo.js"></script> -->
 
 <!-- <div class="card" markdown="1">
 
@@ -22,10 +22,13 @@ I am an NC State student and software developer with experience in backend, fron
 My work experience includes an internship at IBM, and four summers at SAS Institute. While at SAS, I developed a patent for a deep learning model. At IBM, I took an online MIT course on quantum computing.
 
 Languages
-: Rust, Elixir/Phoenix, Java, Ruby, Python, Javascript, HTML/CSS, C, C#, C++, Go, Elm, Crystal, Nim, Wolfram Language
+: Rust, Elixir, Java, Ruby, Python, Javascript, HTML/CSS, C, C#, C++, Go, Elm, Crystal, Nim, Wolfram Language
 
 Other Experience
-: Agile Software Development, Deep Learning, Quantum Computing, OpenGL & WebGL, Deployment Technologies and Docker, Blockchain/dag, Unix
+: Agile Software Development, Deep Learning, Quantum Computing, Backend Development, Frontend Development, GPU & Distributed Computing
+
+Tech Stack Experience
+: AWS, Docker, Tensorflow/PyTorch/Caffe/Keras, OpenGL & WebGL, Phoenix (Elixir), Rocket (Rust), React & React Native, OpenCL, Sinatra (Ruby), Blockchain/dag, Unix
 
 </div>
 

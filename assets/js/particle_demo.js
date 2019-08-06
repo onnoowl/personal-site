@@ -114,7 +114,7 @@ if (typeof (WebGL2RenderingContext) !== "undefined") {
       "mat4 PMatrix": transpose(getProyection(canvas.width / canvas.height)),
       "mat4 cameraWMatrix": transpose(new Float32Array([1.0, 0.0, 0.0, 0.0,
         0.0, 1.0, 0.0, 0.0,
-        0.0, 0.0, 1.0, -3.0,
+        0.0, 0.0, 1.0, -1.0,
         0.0, 0.0, 0.0, 1.0])),
 
       'float omega1': omega1.val,
