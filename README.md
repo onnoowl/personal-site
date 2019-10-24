@@ -54,6 +54,13 @@ Cary Academy, Cary, NC
 <div class="card" markdown="1">
 
 ## Work Experience
+### **SAS R&D Technical Intern** --- Summer of 2019
+*SAS Institute Inc., Cary, NC.*
+- Built text+image based deep learning models that predict (with super-human ability) the number of likes a potential social media post will receive.
+- Developed statistical analytic tools for processing bulk visual and textual social media data.
+- Created a multi-category sentiment classifier for text based on labels derived from Twitter emoji usage.
+  - Gained experience with deep learning, pytorch, DenseNet, ELMO, BERT, YOLO, CAS, Python, and statistics.
+
 ### **IBM Technical Intern** --- Summer 2018
 *International Business Machines Corp., Raleigh, NC.*
 - Participated in an online MITx Quantum Information Science II course throughout the summer.
@@ -94,6 +101,5 @@ Cary Academy, Cary, NC
 - Albright Entrepreneurs Village Member
 - Charles D. & Patricia D. Lamb Scholarship
 - Duke Energy Scholarship
-- Headmaster’s Honor Roll and Effort Honor Roll for all trimesters of High School.
 
 </div>
