@@ -1,0 +1,179 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubheadingPartial}[2]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://stuarthunt.dev/}{\Large Stuart Hunt}} & \href{https://stuarthunt.dev/}{https://stuarthunt.dev} \\
+  &\href{mailto:me@stuarthunt.dev}{me@stuarthunt.dev} \\
+\end{tabular*}
+% \vspace{-20pt}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{MS - North Carolina State University}{Raleigh, NC}
+{Master of Computer Science; GPA: 4.00}{Expected December 2020}
+\resumeSubheading
+{BS - North Carolina State University}{Raleigh, NC}
+{Bachelor of Science, Computer Science and Engineering, Minor in Physics; GPA: 4.0}{December 2019}
+\resumeSubHeadingListEnd
+
+% MS - North Carolina State University, Raleigh, NC
+% : Master of Computer Science - Expected December 2020
+% : **4.0GPA**
+
+% BS - North Carolina State University, Raleigh, NC
+% : Bachelor of Science, Computer Science and Engineering, Minor in Physics - December 2019
+% : **4.0GPA**, Valedictorian, Summa Cum Laude
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Qualcomm Technologies, Inc.}{San Diego, CA}
+{GPU Compiler Intern}{Summer of 2020}
+\resumeItemListStart
+\resumeItem{DirectX}
+{Built a real time ray tracing demo using DirectX 12. Implemented direct lighting, indirect lighting, shadows, and reflections}
+\resumeItem{Performance}
+{Conducted experiments to analyze the performance characteristics of DirectX Ray Tracing}
+\resumeItem{Vulkan}{Learned Vulkan's ray tracing extensions to do detailed comparisons with DirectX}
+\resumeItemListEnd
+
+\resumeSubheading
+{SAS Institute Inc.}{Cary, NC}
+{Cognitive Computing Intern}{Summers of 2017 and 2019}
+\resumeItemListStart
+\resumeItem{Social Media Prediction}
+{Built text+image deep learning models that predict (with super-human ability) the number of likes a potential social media post will receive}
+\resumeItem{Analysis}{Developed statistical analytic tools for processing bulk visual and textual social media data using SAS's CAS}
+\resumeItem{Sentiment}{Created a multi-category sentiment classifier with BERT using training data derived from Twitter emoji usage}
+\resumeItem{Quantum Computing}{Studied quantum computing and led weekly learning groups}
+\resumeItem{Deep Learning Calibration}{Developed a method for calibrating AI model probability outputs to be statistically accurate}
+\resumeItemListEnd
+\resumeSubheadingPartial{Year-Round Cognitive Computing Intern}{May 2016 - January 2017}
+\resumeItemListStart
+\resumeItem{Patent Lead Inventor}{Patented a novel deep learning model for classifying and locating overlapping patterns present in one-dimensional data for the purposes of generating natural language descriptions\\U.S. Patent Application 20180211153, Filed January 24th 2017, Published July 26th, 2018, Appl. No. 15/658566\\Inventors: Stuart Hunt, Samuel Leeman-Munk, Richard Crowell.}
+\resumeItemListEnd
+\resumeSubheadingPartial{Platform Deployment Intern}{Summers of 2014, 2015}
+\resumeItemListStart
+\resumeItem{BOSH Extension}{Built a POC extension of B.O.S.H. that extended its functionality from cloud-based deployment only, to allow deploying to any hardware}
+\resumeItem{Distributed Log Analysis}{Prototyped an AWS based log collection/analysis tool, with a web GUI for managing workers}
+\resumeItemListEnd
+
+\resumeSubheading
+{International Business Machines Corp. (IBM)}{Raleigh, NC}
+{Software Intern}{Summer of 2019}
+\resumeItemListStart
+\resumeItem{Quantum Information}
+{Participated in an online MITx Quantum Information Science II course throughout the summer.}
+\resumeItem{Quantum Language}
+{Built a POC quantum language parser that allowed for the use of Bra-Ket notation for computation}
+\resumeItem{Data Dashboard}
+{Led a small intern team to develop a business data analysis/visualization app for live data insights}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages}
+{: Rust -- Elixir -- Go -- Python -- Ruby -- Typescript/Javascript -- Java -- C -- C\# -- C++ -- HTML/CSS -- Elm -- Crystal -- Nim (and always excited to learn more!)}
+\resumeSubItem{General Experience}{: Agile Software Development -- Deep Learning -- Quantum Computing -- Computer Graphics -- Language Design -- Game Engine Design -- Backend Development -- Frontend Development -- GPU \& Distributed Computing -- Continuous Integration -- Leadership -- Project Management}
+\resumeSubItem{Misc Technology Experience}{: AWS -- Docker -- Tensorflow/PyTorch/Caffe/Keras -- WebGPU -- DirectX -- OpenGL/WebGL -- Phoenix (Elixir) -- Rocket (Rust) -- React \& React Native -- OpenCL -- Sinatra (Ruby) -- Blockchain/dag -- Unix -- DenseNet -- BERT -- ELMO -- YOLO}
+\resumeSubHeadingListEnd
+
+
+%-----------Honors-----------------
+\section{Honors}
+\resumeSubHeadingListStart
+\item\small{Graduated Valedictorian \& Summa Cum Laude -- Computer Science Honors member -- NCSU Honors Program member -- Tau Beta Pi Honors Society Member -- Phi Kappa Phi Honors Society Member -- Accelerated Bachelor's Master's Program Member -- Dean’s List for all semesters completed -- Albright Entrepreneurs Village Member -- Charles D. \& Patricia D. Lamb Scholarship -- Duke Energy Scholarship
+  \vspace{-2pt}
+}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

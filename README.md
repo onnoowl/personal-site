@@ -1,9 +1,9 @@
-<head>
+<!-- <head>
   <script src="/assets/js/scene_utils.js"></script>
   <script src="/assets/js/WebCLGL.min.js"></script>
 </head>
 
-<canvas id="graph" class="canvas-background"></canvas>
+<canvas id="graph" class="canvas-background"></canvas> -->
 <!-- <script src="/assets/js/particle_demo.js"></script> -->
 
 <!-- <div class="card" markdown="1">
@@ -15,48 +15,64 @@
 
 <div class="card" markdown="1">
 
-## Summary
+## Objective
 
-I am an NC State student and software developer with experience in backend, frontend, deep learning, entrepreneurship, and over a dozen programming languages.
-
-My work experience includes an internship at IBM, and four summers at SAS Institute. While at SAS, I developed a patent for a deep learning model. At IBM, I took an online MIT course on quantum computing.
-
-Languages
-: Rust, Elixir, Java, Ruby, Python, Javascript, HTML/CSS, C, C#, C++, Go, Elm, Crystal, Nim, Wolfram Language
-
-Other Experience
-: Agile Software Development, Deep Learning, Quantum Computing, Backend Development, Frontend Development, GPU & Distributed Computing
-
-Tech Stack Experience
-: AWS, Docker, Tensorflow/PyTorch/Caffe/Keras, OpenGL & WebGL, Phoenix (Elixir), Rocket (Rust), React & React Native, OpenCL, Sinatra (Ruby), Blockchain/dag, Unix
+I am seeking a position that will fuel my passion for innovation, allow me to dedicate myself to the development of better technology, and make effective use of my diverse background in software.
 
 </div>
 
 <div class="card" markdown="1">
 
-## Objective
+## Summary
 
-To advance the fields of programming language design, artificial intelligence, and/or quantum computing while obtaining a Masters in Computer Science through NCSU’s ABM program.
+I am a software developer with diverse experience in backend, frontend, deep learning, quantum computing, entrepreneurship, and over a dozen programming languages.
+
+My work experience includes internships at Qualcomm, IBM, and five summers at SAS Institute. While at SAS, I gained experience with deep learning, data analysis, deployment technologies, and developed a deep learning patent. At IBM, I learned more about quantum computing and data visualization. At Qualcomm, I developed a DirectX ray tracing demo and analyzed its performance characteristics.
+
+Languages
+: Rust, Elixir, Go, Python, Ruby, Typescript/Javascript, Java, C, C#, C++, HTML/CSS, Elm, Crystal, Nim, (and always excited to learn more!)
+
+General Experience
+: Agile Software Development, Deep Learning, Quantum Computing, Computer Graphics, Language Design, Game Engine Design, Backend Development, Frontend Development, GPU & Distributed Computing, Continuous Integration, Leadership, Project Management
+
+Misc Technology Experience
+: AWS, Docker, Tensorflow/PyTorch/Caffe/Keras, WebGPU, DirectX, OpenGL/WebGL, Phoenix (Elixir), Rocket (Rust), React & React Native, OpenCL, Sinatra (Ruby), Blockchain/dag, Unix, DenseNet, BERT, ELMO, YOLO
 
 </div>
 
 <div class="card" markdown="1">
 
 ## Education
-North Carolina State University, Raleigh, NC
-: **4.0GPA**, Dean’s List, Bachelor of Science, Computer Science and Engineering - December 2019
+
+[NCSU Transcript (Undergraduate + Graduate, Unofficial)](/assets/transcript.pdf)
+
+MS - North Carolina State University, Raleigh, NC
+: Master of Computer Science - Expected December 2020
+: **4.0GPA**
+
+BS - North Carolina State University, Raleigh, NC
+: Bachelor of Science, Computer Science and Engineering, Minor in Physics - December 2019
+: **4.0GPA**, Valedictorian, Summa Cum Laude
 
 Cary Academy, Cary, NC
-: High School Diploma, Headmaster’s Honor Roll – June 2016
+: High School Diploma – June 2016
+: Headmaster’s Honor Roll
 
 </div>
 
 <div class="card" markdown="1">
 
 ## Work Experience
+### **Qualcomm Intern** --- Summer of 2020
+*Qualcomm Technologies, Inc., San Diego, CA.*
+- Built a real time ray tracing demo using DirectX 12
+  - Implemented direct lighting, indirect lighting, shadows, and reflections
+- Conducted experiments to analyze the performance characteristics of DirectX Ray Tracing
+- Learned to use Vulkan's ray tracing extensions
+
 ### **SAS R&D Technical Intern** --- Summer of 2019
 *SAS Institute Inc., Cary, NC.*
-- Built text+image based deep learning models that predict (with super-human ability) the number of likes a potential social media post will receive.
+- Built text+image deep learning models that predict (with super-human ability) the number of likes a potential social media post will receive.
 - Developed statistical analytic tools for processing bulk visual and textual social media data.
 - Created a multi-category sentiment classifier for text based on labels derived from Twitter emoji usage.
   - Gained experience with deep learning, pytorch, DenseNet, ELMO, BERT, YOLO, CAS, Python, and statistics.
@@ -80,9 +96,9 @@ Cary Academy, Cary, NC
 
 ### **SAS R&D Technical Intern** --- Summers of 2014, 2015, 2016, and 2017
 *SAS Institute Inc., Cary, NC.*
-- Summer 2017: Studied quantum computing, and developed a method for evaluating, and calibrating artificial intelligence model probability outputs and their statistical accuracy. Began work on a second patent.
+- Summer 2017: Studied quantum computing, and developed a method for evaluating, and calibrating artificial intelligence model probability outputs and their statistical accuracy.
   - Gained experience with Quantum Computing, Bayesian statistics, deep learning probability calibration techniques, and more of the Python ecosystem
-- Summer 2016 – January 2017: Patented a deep learning model I developed to learn insights from data for the purposes of generating natural language descriptions of the data.
+- May 2016 – January 2017: Patented a deep learning model developed to learn insights from data for the purposes of generating natural language descriptions of the data.
   - Gained experience with deep learning, tensorflow, recurrent and convolutional neural networks, synthetic data generation, Elixir, and Python
 - Summer 2015: Built a proof of concept extension of B.O.S.H. that extended its functionality from only deploying to cloud-based hardware to deploying to any hardware.
   - Gained experience with Go, Ruby, Git, deployment, unit testing, documentation, and analyzing open source project code
@@ -93,10 +109,13 @@ Cary Academy, Cary, NC
 
 <div class="card" markdown="1">
 
-## Honors and Activities:
+## Honors:
+- Graduated Valedictorian and Summa Cum Laude
+- Computer Science Honors member
 - NCSU Honors Program member
 - Tau Beta Pi Honors Society Member
 - Phi Kappa Phi Honors Society Member
+- Accelerated Bachelor's Master's Program Member
 - Dean’s List for all semesters completed
 - Albright Entrepreneurs Village Member
 - Charles D. & Patricia D. Lamb Scholarship
