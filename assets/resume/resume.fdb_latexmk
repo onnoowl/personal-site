@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1598045537 "/Users/stuart/Documents/1Projects/personal-site/assets/latex_resume/resume.tex" "/Users/stuart/Documents/1Projects/personal-site/assets/latex_resume/resume.pdf" "resume" 1598045569
-  "/Users/stuart/Documents/1Projects/personal-site/assets/latex_resume/resume.aux" 1598045537 1081 1dbf0505e90ab87f5fb1dd0e597f19e4 ""
-  "/Users/stuart/Documents/1Projects/personal-site/assets/latex_resume/resume.tex" 1598045569 7368 622d7e427aa0119d598e567180987388 ""
+["pdflatex"] 1598046585 "/Users/stuart/Documents/1Projects/personal-site/assets/resume/resume.tex" "/Users/stuart/Documents/1Projects/personal-site/assets/resume/resume.pdf" "resume" 1598046588
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/resume.aux" 1598046586 1081 1dbf0505e90ab87f5fb1dd0e597f19e4 ""
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/resume.tex" 1598046587 7705 15a37a3bfc23e70e37f19a56c71df04a ""
   "/Users/stuart/Library/texlive/2017basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1576354614 2709648 301f69b71bfd762de6adf4ae8ca27676 ""
   "/usr/local/texlive/2017basic/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2017basic/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -79,13 +79,13 @@
   "/usr/local/texlive/2017basic/texmf-dist/web2c/texmf.cnf" 1570742662 39452 758acee3f2beaeeedff570c5f5d76d98 ""
   "/usr/local/texlive/2017basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1598028293 79192 524952a6c58652f783312cdc7d781483 ""
   "/usr/local/texlive/2017basic/texmf.cnf" 1496851631 628 b344fac068e513a3e5fe2214c3a47398 ""
-  "resume.aux" 1598045537 1081 1dbf0505e90ab87f5fb1dd0e597f19e4 "pdflatex"
-  "resume.out" 1598045537 171 6dc9371540dd2f1ca6530c86ac57b5fb "pdflatex"
-  "resume.tex" 1598045569 7368 622d7e427aa0119d598e567180987388 ""
+  "resume.aux" 1598046586 1081 1dbf0505e90ab87f5fb1dd0e597f19e4 "pdflatex"
+  "resume.out" 1598046586 171 6dc9371540dd2f1ca6530c86ac57b5fb "pdflatex"
+  "resume.tex" 1598046587 7705 15a37a3bfc23e70e37f19a56c71df04a ""
   (generated)
   "resume.pdf"
-  "resume.out"
-  "resume.aux"
-  "/Users/stuart/Documents/1Projects/personal-site/assets/latex_resume/resume.log"
-  "/Users/stuart/Documents/1Projects/personal-site/assets/latex_resume/resume.pdf"
   "resume.log"
+  "resume.aux"
+  "resume.out"
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/resume.log"
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/resume.pdf"
