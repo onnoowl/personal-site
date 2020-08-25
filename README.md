@@ -44,7 +44,7 @@ Misc Technology Experience
 
 ## Education
 
-[NCSU Transcript (Undergraduate + Graduate, Unofficial)](/assets/transcript.pdf)
+[NCSU Transcript (Undergraduate + Graduate, Unofficial)](/assets/StuartHuntTranscript.pdf)
 
 MS - North Carolina State University, Raleigh, NC
 : Master of Computer Science - Expected December 2020
