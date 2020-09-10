@@ -77,7 +77,7 @@ Cary Academy, Cary, NC
 ## Work Experience
 ### **GPU Compiler Intern** --- Summer of 2020
 *Qualcomm Technologies, Inc., San Diego, CA.*
-- **DirectX**: Built a real time ray tracing demo using DirectX 12, including indirect lighting, shadows, and reflections}
+- **DirectX**: Built a real time ray tracing demo using DirectX 12, including indirect lighting, shadows, and reflections
 - **Performance**: Conducted experiments to analyze the performance characteristics of DirectX Ray Tracing
 
 ### **SAS Cognitive Computing Intern** --- Summer of 2019
@@ -115,6 +115,8 @@ Cary Academy, Cary, NC
 - **Reinforcement Learning**: Trained an AlphaGO based A.I. to play a strategic board game called Pentago
 - **GPU Iter**: Built a Rust GPU compute library that focussed on usability and efficiency
 - **Beer Money**: Co-founded an LLC and launched an odd jobs marketplace app \& website for students built with Elixir
+- **Neat-Ex**: An Elixir implementation for the NEAT artificial intelligence algorithm
+- **A Lonely Journey**: Play as a space probe exploring the solar system. Features realistic orbital physics.
 
 </div>
 
