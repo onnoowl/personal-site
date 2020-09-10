@@ -18,6 +18,36 @@ $mq-mobile-landscape: 480px !default;
   }
 }
 
+.title-and-avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  margin-right: 1em;
+  float: right;
+  // display: inline;
+}
+
+.avatar-container {
+  flex: 1 1 0;
+}
+
+.title-right-side {
+  flex: 1 1 auto;
+}
+
+section #title h1.title {
+  display: inline;
+  font-size: 43px;
+}
+
 section #title p {
   margin-bottom: 15px;
 }

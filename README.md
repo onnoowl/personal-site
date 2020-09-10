@@ -75,42 +75,33 @@ Cary Academy, Cary, NC
 <div class="card" markdown="1">
 
 ## Work Experience
-### **Qualcomm Intern** --- Summer of 2020
+### **GPU Compiler Intern** --- Summer of 2020
 *Qualcomm Technologies, Inc., San Diego, CA.*
-- Built a **real time ray tracing** demo using DirectX 12
-  - Implemented direct lighting, indirect lighting, shadows, and reflections
-- Conducted experiments to analyze the performance characteristics of DirectX Ray Tracing
-- Learned to use Vulkan's ray tracing extensions
+- **DirectX**: Built a real time ray tracing demo using DirectX 12, including indirect lighting, shadows, and reflections}
+- **Performance**: Conducted experiments to analyze the performance characteristics of DirectX Ray Tracing
 
-### **SAS R&D Technical Intern** --- Summer of 2019
+### **SAS Cognitive Computing Intern** --- Summer of 2019
 *SAS Institute Inc., Cary, NC.*
-- Built **text+image deep learning models** that predict (with super-human ability) the number of likes a potential social media post will receive.
-- Developed statistical analytic tools for **processing bulk visual and textual social media data**.
-- Created a multi-category **sentiment classifier** for text based on labels derived from Twitter emoji usage.
-  - Gained experience with deep learning, pytorch, DenseNet, ELMO, BERT, YOLO, CAS, Python, and statistics.
+- **Social Media Prediction**: Built text+image deep learning models that predict the number of likes a potential social media post will receive with super-human accuracy
+- **Social Data Analysis**: Implemented data analysis tools for processing bulk visual and textual social media
+- **Sentiment Classifier**: Trained a multi-category sentiment classifier with BERT from Twitter emoji usage
 
 ### **IBM Technical Intern** --- Summer 2018
 *International Business Machines Corp., Raleigh, NC.*
-- Participated in an online MITx **Quantum Information Science II** course throughout the summer.
-- Built a POC **quantum algorithm language parser** that allowed the use of quantum mathematical notation to program quantum simulations as part of an IBM hack-a-thon.
-- **Led a small intern team** to develop a business data analysis and visualization app for viewing live insights of sales data.
-  - Gained valuable leadership, project management, and teamwork skills, as well as further experience with cloud deployment, continuous integration, Python, pandas, Javascript/HTML/CSS, and data analysis
+- **Quantum Language**: Prototyped a quantum language parser that allowed for the use of Bra-Ket notation
+- **Quantum Information**: Took an online MITx Quantum Information Science II course
+- **Data Dashboard**: Led an intern team to build a business data analysis/visualization web app for data insights
 
 ### **Co-founder and Developer** --- January 2017 – March 2018
 *Backyard Ventures LLC, Raleigh, NC.*
-- **Launched BeerMoney**, an odd jobs marketplace for students.
-  - Developed the BeerMoney web app and backend server, gaining extensive experience with Elixir/Phoenix, Javascript/HTML/CSS, and SQL. Built with distributed and scalable infrastructure.
+- **App Development**: Launched BeerMoney, an odd jobs marketplace for students, by students. Developed the web app and backend server with distributed \& scalable infrastructure
 
 ### **SAS R&D Technical Intern** --- Summers of 2014, 2015, 2016, and 2017
 *SAS Institute Inc., Cary, NC.*
-- Summer 2017: Developed a method for evaluating and **calibrating A.I. model probability** outputs and their statistical accuracy. Studied **quantum computing** while leading weekly textbook study groups.
-  - Gained experience with Quantum Computing, Bayesian statistics, deep learning probability calibration techniques, and more of the Python ecosystem
-- May 2016 – January 2017: **Patented a deep learning model** developed to learn insights from data for the purposes of generating natural language descriptions of the data.
-  - Gained experience with deep learning, tensorflow, recurrent and convolutional neural networks, synthetic data generation, Elixir, and Python
-- Summer 2015: Built a proof of concept B.O.S.H. extension that extended its functionality from only deploying to cloud-based hardware to deploying to any hardware.
-  - Gained experience with Go, Ruby, Git, deployment, unit testing, documentation, and analyzing open source project code
-- Summer 2014: Implemented a **distributed cloud-based log collection/analysis tool** with web GUI.
-  - Gained hands on experience with Amazon Cloud Services, Ruby, Java, HTML/CSS/Javascript, Git, Regex, and the MS Office Suite
+- **Quantum Computing**: Studied quantum computing and led weekly textbook discussion groups
+- **Deep Learning Calibration**: Developed a method for calibrating model probabilities to be statistically accurate
+- **BOSH Extension**: Built a Go BOSH extension that allows deploying anywhere, instead of just to the cloud
+- **Distributed Log Analysis**: Implemented an AWS log collection/analysis tool, with a web GUI for management
 
 </div>
 

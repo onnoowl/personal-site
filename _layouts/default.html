@@ -29,7 +29,16 @@
       <section>
         <div id="title">
           <a href="/">
-            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+            <div class="title-and-avatar">
+              <div class="avatar-container">
+                <img src="/assets/images/avatar.png" width=65em height=65em alt="Avatar" class="avatar">
+              </div>
+              <span>
+                <h1 class="title">{{ site.title | default: site.github.repository_name }}</h1>
+              </span>
+              <div class="title-right-side">
+              </div>
+            </div>
             <p>{{ site.description | default: site.github.project_tagline }}</p>
           </a>
           <a class="btn mail" href="mailto:error.javascript.not.enabled@stuarthunt.dev">
