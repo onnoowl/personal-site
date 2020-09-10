@@ -25,7 +25,7 @@ I am seeking a position that will fuel my passion for innovation, allow me to de
 
 ## Summary
 
-I am a software developer with Master's degree, diverse experience in backend, frontend, deep learning, quantum computing, entrepreneurship, and over a dozen programming languages.
+I am a software developer with a Master's degree in computer science and years of diverse experience in backend, frontend, deep learning, quantum computing, entrepreneurship, and over a dozen programming languages.
 
 My work experience includes internships at Qualcomm, IBM, and five summers at SAS Institute. While at SAS, I gained experience with deep learning, data analysis, deployment technologies, and developed a deep learning patent. At IBM, I learned more about quantum computing and data visualization. At Qualcomm, I developed a DirectX ray tracing demo and analyzed its performance characteristics.
 
@@ -122,6 +122,7 @@ Cary Academy, Cary, NC
 - **QALC (Quantum Calculator)**: A Bra-Ket notation based language compiler built with MLIR and LLVM
 - **Distributed Ledger**: Contributed to and applied a DAG distributed ledger for peer to peer video game networking
 - **Reinforcement Learning**: Trained an AlphaGO based A.I. to play a strategic board game called Pentago
+- **GPU Iter**: Built a Rust GPU compute library that focussed on usability and efficiency
 - **Beer Money**: Co-founded an LLC and launched an odd jobs marketplace app \& website for students built with Elixir
 
 </div>
@@ -134,7 +135,7 @@ Cary Academy, Cary, NC
 - NCSU Honors Program member
 - Tau Beta Pi Honors Society Member
 - Phi Kappa Phi Honors Society Member
-- Accelerated Bachelor's Master's Program Member
+- Accelerated Bachelor/Master Program Member
 - Dean’s List for all semesters completed
 - Albright Entrepreneurs Village Member
 - Charles D. & Patricia D. Lamb Scholarship
