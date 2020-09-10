@@ -37,6 +37,7 @@ $mq-mobile-landscape: 480px !default;
 
 .avatar-container {
   flex: 1 1 0;
+  min-width: 67px;
 }
 
 .title-right-side {
@@ -45,7 +46,8 @@ $mq-mobile-landscape: 480px !default;
 
 section #title h1.title {
   display: inline;
-  font-size: 43px;
+  font-size: 38px;
+  flex: 1 1 auto;
 }
 
 section #title p {
@@ -177,7 +179,7 @@ h3 {
 .card {
   padding: 30px;
   padding-bottom: 15px;
-  background-color: #262626d9;
+  background-color: #282828da;
 }
 
 .card,
@@ -214,7 +216,7 @@ body {
   -moz-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  background: #191919;
+  background: #171717;
 }
 
 @include mobile-only {
