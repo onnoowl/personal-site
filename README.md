@@ -25,19 +25,9 @@ I am seeking a position that will fuel my passion for innovation, allow me to de
 
 ## Summary
 
-I am a software developer with a Master's degree in computer science and years of diverse experience in backend, frontend, deep learning, quantum computing, entrepreneurship, and over a dozen programming languages.
+I am a software developer with a Master's degree in computer science and years of diverse experience in backend, frontend, deep learning, quantum computing, and entrepreneurship. I have a love for novel and innovative programming languages, like Rust and Elixir.
 
 My work experience includes internships at Qualcomm, IBM, and five summers at SAS Institute. While at SAS, I gained experience with deep learning, data analysis, deployment technologies, and developed a deep learning patent. At IBM, I learned more about quantum computing and data visualization. At Qualcomm, I developed a DirectX ray tracing demo and analyzed its performance characteristics.
-
-Languages
-: Rust, Elixir, Go, Python, Ruby, Typescript/Javascript, Java, C, C#, C++, HTML/CSS, Elm, Crystal, Nim
-: (And always excited to learn more!)
-
-General Experience
-: Agile Software Development, Deep Learning, Quantum Computing, Computer Graphics, Language Design, Game Engine Design, Backend Development, Frontend Development, GPU & Distributed Computing, Continuous Integration, Leadership, Project Management
-
-Misc Technology Experience
-: AWS, Docker, Tensorflow/PyTorch/Caffe/Keras, WebGPU, DirectX, OpenGL/WebGL, MLIR, LLVM, React & React Native, OpenCL, Phoenix (Elixir), Rocket (Rust), Sinatra (Ruby), Blockchain, Unix, DenseNet, BERT, ELMO, YOLO
 
 </div>
 
@@ -117,6 +107,22 @@ Cary Academy, Cary, NC
 - **Beer Money**: Co-founded an LLC and launched an odd jobs marketplace app & website for students built with Elixir
 - **Neat-Ex**: An Elixir implementation for the NEAT artificial intelligence algorithm
 - **A Lonely Journey**: Play as a space probe exploring the solar system. Features realistic orbital physics.
+
+</div>
+
+<div class="card" markdown="1">
+
+## Skills
+
+Languages
+: Rust, Elixir, Go, Python, Ruby, Typescript/Javascript, Java, C, C#, C++, HTML/CSS, Elm, Crystal, Nim
+: (And always excited to learn more!)
+
+General Experience
+: Agile Software Development, Deep Learning, Quantum Computing, Computer Graphics, Language Design, Game Engine Design, Backend Development, Frontend Development, GPU & Distributed Computing, Continuous Integration, Leadership, Project Management
+
+Misc Technology Experience
+: AWS, Docker, Tensorflow/PyTorch/Caffe/Keras, WebGPU, DirectX, OpenGL/WebGL, MLIR, LLVM, React & React Native, OpenCL, Phoenix (Elixir), Rocket (Rust), Sinatra (Ruby), Blockchain, Unix, DenseNet, BERT, ELMO, YOLO
 
 </div>
 
