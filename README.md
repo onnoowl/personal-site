@@ -40,7 +40,7 @@ I am seeking a position in prototyping or product development (remote, or local 
 [NCSU Transcript (Undergraduate + Graduate, Unofficial)](/assets/StuartHuntTranscript.pdf)
 
 MS - North Carolina State University, Raleigh, NC
-: Master of Computer Science - Expected December 2020
+: Master of Computer Science - December 2020
 : **4.0GPA**
 
 BS - North Carolina State University, Raleigh, NC
