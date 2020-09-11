@@ -13,13 +13,13 @@
 
 </div> -->
 
-<div class="card" markdown="1">
+<!-- <div class="card" markdown="1">
 
 ## Objective
 
 I am seeking a position that will fuel my passion for innovation, allow me to dedicate myself to the development of better technology, and make effective use of my diverse background in software.
 
-</div>
+</div> -->
 
 <div class="card" markdown="1">
 
