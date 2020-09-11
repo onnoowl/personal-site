@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1599856522 "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.tex" "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.pdf" "StuartHuntResume" 1599856576
-  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.aux" 1599856522 1290 c5d835dcbb1a2c9443e136fed471955e ""
-  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.tex" 1599856536 8908 461626fd3215aaabbf6e3859034774db ""
+["pdflatex"] 1599858211 "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.tex" "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.pdf" "StuartHuntResume" 1599858212
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.aux" 1599858212 1290 c5d835dcbb1a2c9443e136fed471955e ""
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.tex" 1599858211 8912 ac84ab6ba91dee952f0a5bf5b4ed62c7 ""
   "/Users/stuart/Library/texlive/2017basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1576354614 2709648 301f69b71bfd762de6adf4ae8ca27676 ""
   "/usr/local/texlive/2017basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2017basic/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -91,13 +91,13 @@
   "/usr/local/texlive/2017basic/texmf-dist/web2c/texmf.cnf" 1570742662 39452 758acee3f2beaeeedff570c5f5d76d98 ""
   "/usr/local/texlive/2017basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1599534706 5009077 f1a6aea478c59007525c00890d47044d ""
   "/usr/local/texlive/2017basic/texmf.cnf" 1496851631 628 b344fac068e513a3e5fe2214c3a47398 ""
-  "StuartHuntResume.aux" 1599856522 1290 c5d835dcbb1a2c9443e136fed471955e "pdflatex"
-  "StuartHuntResume.out" 1599856522 256 de8546202feed67531938216fa8f273d "pdflatex"
-  "StuartHuntResume.tex" 1599856536 8908 461626fd3215aaabbf6e3859034774db ""
+  "StuartHuntResume.aux" 1599858212 1290 c5d835dcbb1a2c9443e136fed471955e "pdflatex"
+  "StuartHuntResume.out" 1599858212 256 de8546202feed67531938216fa8f273d "pdflatex"
+  "StuartHuntResume.tex" 1599858211 8912 ac84ab6ba91dee952f0a5bf5b4ed62c7 ""
   (generated)
-  "StuartHuntResume.pdf"
-  "StuartHuntResume.aux"
-  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.log"
   "StuartHuntResume.out"
   "StuartHuntResume.log"
   "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.pdf"
+  "/Users/stuart/Documents/1Projects/personal-site/assets/resume/StuartHuntResume.log"
+  "StuartHuntResume.pdf"
+  "StuartHuntResume.aux"
