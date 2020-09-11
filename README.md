@@ -29,6 +29,8 @@ I am a software developer with a Master's degree in computer science and years o
 
 My work experience includes internships at Qualcomm, IBM, and five summers at SAS Institute. While at SAS, I gained experience with deep learning, data analysis, deployment technologies, and developed a deep learning patent. At IBM, I learned more about quantum computing and data visualization. At Qualcomm, I developed a DirectX ray tracing demo and analyzed its performance characteristics.
 
+I am seeking a position in prototyping or product development (remote, or local in Raleigh/Durham/RTP) that will fuel my passion for innovation, and make effective use of my diverse background in software.
+
 </div>
 
 <div class="card" markdown="1">
