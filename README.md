@@ -114,7 +114,7 @@ Cary Academy, Cary, NC
 - **Distributed Ledger**: Contributed to and applied a DAG distributed ledger for peer to peer video game networking
 - **Reinforcement Learning**: Trained an AlphaGO based A.I. to play a strategic board game called Pentago
 - **GPU Iter**: Built a Rust GPU compute library that focussed on usability and efficiency
-- **Beer Money**: Co-founded an LLC and launched an odd jobs marketplace app \& website for students built with Elixir
+- **Beer Money**: Co-founded an LLC and launched an odd jobs marketplace app & website for students built with Elixir
 - **Neat-Ex**: An Elixir implementation for the NEAT artificial intelligence algorithm
 - **A Lonely Journey**: Play as a space probe exploring the solar system. Features realistic orbital physics.
 
