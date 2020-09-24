@@ -27,7 +27,7 @@ I am seeking a position that will fuel my passion for innovation, allow me to de
 
 I am a software developer with a Master's degree in computer science and years of diverse experience in backend, frontend, deep learning, quantum computing, and entrepreneurship. I have a love for novel and innovative programming languages, like Rust and Elixir.
 
-My work experience includes internships at Qualcomm, IBM, and five summers at SAS Institute. While at SAS, I gained experience with deep learning, data analysis, deployment technologies, and developed a deep learning patent. At IBM, I learned more about quantum computing and data visualization. At Qualcomm, I developed a DirectX ray tracing demo and analyzed its performance characteristics.
+My work experience includes internships at Qualcomm, IBM, and five summers at SAS Institute. While at SAS, I gained experience with deep learning, data analysis, deployment technologies, and developed a deep learning patent. At IBM, I learned more about quantum computing and data visualization. At Qualcomm, I developed a DirectX real time ray tracing demo and analyzed its performance characteristics.
 
 I am seeking a position in prototyping or product development (remote, or local in Raleigh/Durham/RTP) that will fuel my passion for innovation, and make effective use of my diverse background in software.
 
@@ -101,14 +101,15 @@ Cary Academy, Cary, NC
 
 ## Projects
 
-- **Amalgom**: Developed an efficient voxel game engine for the web and native using WebGPU
-- **QALC (Quantum Calculator)**: A Bra-Ket notation based language compiler built with MLIR and LLVM
+- **Voxel Engine**: Developed an efficient voxel game engine for the web and native using WebGPU
+- **Quantum Calculator**: A Bra-Ket notation based language compiler built with MLIR and LLVM
 - **Distributed Ledger**: Contributed to and applied a DAG distributed ledger for peer to peer video game networking
 - **Reinforcement Learning**: Trained an AlphaGO based A.I. to play a strategic board game called Pentago
 - **GPU Iter**: Built a Rust GPU compute library that focussed on usability and efficiency
-- **Beer Money**: Co-founded an LLC and launched an odd jobs marketplace app & website for students built with Elixir
+- **Product Development**: Co-founded an LLC and launched a full stack jobs marketplace app & website with Elixir
 - **Neat-Ex**: An Elixir implementation for the NEAT artificial intelligence algorithm
-- **A Lonely Journey**: Play as a space probe exploring the solar system. Features realistic orbital physics.
+- **Space Game Simulator**: Created a 2D physics based solar system exploration game with realistic Newtonian gravity
+
 
 </div>
 
