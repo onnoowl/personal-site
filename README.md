@@ -34,7 +34,7 @@ Cary Academy, Cary, NC
 *Rocket Hunt Studios, Cary, NC.*
 - **Game Engine Developer**: Co-developed a purpose-built 3D game engine featuring GPU-accelerated physics-based active ragdolls, efficient voxel storage and rendering systems, peer-to-peer networking, a novel SIMD-accelerated lookup-table based Simplex noise generator, and a non-blockable render architecture.
 
-### **Engineering Lead 2021-2023, Consultant 2023-present** --- 2021-present
+### **Engineering Lead** --- 2021-present
 *Reaktive, San Francisco, CA.*
 - **Ultra-Low Latency Remote Desktop**: Led the engineering of a remote desktop solution with performance so fast that users could not distinguish it from a native computer, even in low-latency, high-performance applications like competitive gaming.
 - **Windows Driver Development**: Implemented video capture and encoding in a Windows driver, as well as mouse and keyboard emulation via a Windows kernel driver.
