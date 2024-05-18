@@ -59,10 +59,9 @@ Cary Academy, Cary, NC
 
 <div class="card" markdown="1">
 
-## Skills
+## Languages
 
-Languages
-: Rust, C, C++, Python, Java, Go, Typescript/Javascript/HTML/CSS, Elixir, Ruby
+- Rust, C, C++, Python, Java, Go, Typescript/Javascript/HTML/CSS, Elixir, Ruby
 
 </div>
 
